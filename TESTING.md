@@ -310,7 +310,7 @@ docker compose exec postgres psql -U postgres -c "SELECT 1;"
 
 ### Port conflicts
 
-If ports 3000, 5000, 5432, or 8080 are in use, modify `docker-compose.yml`:
+If ports 3000, 5000, 5432, or 8080 are in use, modify `docker compose.yml`:
 ```yaml
 services:
   odak:

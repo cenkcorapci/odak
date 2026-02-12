@@ -30,7 +30,7 @@ func (s *BucketingService) AssignVariant(experimentID, entityID string, variants
 	// Normalize to 0-9999
 	bucket := int(hash % 10000)
 	
-	// Assign to variant based on traffic distribution
+	// Assign to variant based on traffic distribution (in basis points)
 	cumulative := 0
 	for i := range variants {
 		cumulative += variants[i].TrafficPct

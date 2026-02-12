@@ -48,7 +48,7 @@ cd odak
 
 2. Start all services:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start:
@@ -71,7 +71,7 @@ go mod download
 
 2. Start PostgreSQL and MLflow:
 ```bash
-docker-compose up -d postgres mlflow
+docker compose up -d postgres mlflow
 ```
 
 3. Run the server:
@@ -224,12 +224,12 @@ curl http://localhost:8080/health
 ## Stopping Services
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 To also remove volumes:
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ## License

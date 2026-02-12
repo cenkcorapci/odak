@@ -98,8 +98,8 @@ func jsonToString(v interface{}) (string, error) {
 
 // stringToJSON converts a JSON string to a value
 func stringToJSON(s string, v interface{}) error {
-	if s == "" || s == "{}" {
-		return nil
+	if s == "" {
+		s = "{}"
 	}
 	return json.Unmarshal([]byte(s), v)
 }

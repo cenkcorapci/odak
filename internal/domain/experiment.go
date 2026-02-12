@@ -21,7 +21,7 @@ type Variant struct {
 	ID          string `json:"id"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
-	TrafficPct  int    `json:"traffic_pct"` // Percentage of experiment traffic (sum should be 100)
+	TrafficPct  int    `json:"traffic_pct"` // Percentage in basis points (0-10000, sum should be 10000)
 	ModelURI    string `json:"model_uri"`   // MLflow model URI
 }
 
