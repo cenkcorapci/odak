@@ -105,6 +105,11 @@ func createExperimentHandler(service *application.ExperimentService) gin.Handler
 			return
 		}
 
+		log.Printf("Received experiment: name=%s, variants=%d", exp.Name, len(exp.Variants))
+		for i, v := range exp.Variants {
+			log.Printf("Variant %d: name=%s, traffic_pct=%d", i, v.Name, v.TrafficPct)
+		}
+
 		if err := service.CreateExperiment(&exp); err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
