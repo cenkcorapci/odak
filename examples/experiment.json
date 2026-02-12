@@ -1,0 +1,20 @@
+{
+  "name": "Product Matching Embedding Model Test",
+  "description": "Testing new transformer-based embedding model against current TF-IDF approach",
+  "status": "active",
+  "traffic_pct": 100,
+  "variants": [
+    {
+      "name": "Control - TF-IDF",
+      "description": "Current production model using TF-IDF embeddings",
+      "traffic_pct": 5000,
+      "model_uri": "models:/product-matching/1"
+    },
+    {
+      "name": "Variant A - Transformer",
+      "description": "New transformer-based embedding model",
+      "traffic_pct": 5000,
+      "model_uri": "models:/product-matching/2"
+    }
+  ]
+}
